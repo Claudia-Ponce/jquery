@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Funciones jQuery</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-hide">Click to hide</button>
+            </div>
+            <div class="col">
+                <h3>Función hide</h3>
+                <p id="p-hide">Esto se esconderá.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-show">Click to show</button>
+            </div>
+            <div class="col">
+                <h3>Función mostrar</h3>
+                <p id="p-show">Esto apareció.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-toggle">Click to toggle</button>
+            </div>
+            <div class="col">
+                <h3>Función toggle</h3>
+                <p id="p-toggle">Esto cambiará.</p>
+                <p id="p-toggle2">Esto cambió.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-slicedown">Click to slide down</button>
+            </div>
+            <div class="col">
+                <h3>Función slice down</h3>
+                <p id="p-slicedown">Esto bajó</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-sliceup">Click to slide up</button>
+            </div>
+            <div class="col">
+                <h3>Función slice up</h3>
+                <p id="p-sliceup">Esto subió</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-slidetoggle">Click to slide toggle</button>
+            </div>
+            <div class="col">
+                <h3>Función slide toggle</h3>
+                <p id="p-slidetoggle">Esto aparece y desaparece.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-fadein">Click to fade in</button>
+            </div>
+            <div class="col">
+                <h3>Función fade in</h3>
+                <p id="p-fadein" style="display: none;">Esto aparece.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-fadeout">Click to fade out</button>
+            </div>
+            <div class="col">
+                <h3>Función fade out</h3>
+                <p id="p-fadeout">Esto desaparece.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-addclass">Click to add class</button>
+            </div>
+            <div class="col">
+                <h3>Función add class</h3>
+                <style>.selected{color: red;}</style>
+                <p id="p-addclass">Esto cambió.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-before">Click to before</button>
+            </div>
+            <div class="col">
+                <h3>Función before</h3>
+                <p id="p-second">que esto.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-after">Click to after</button>
+            </div>
+            <div class="col">
+                <h3>Función after</h3>
+                <p id="p-first">Esto irá primero...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-append">Click to append</button>
+            </div>
+            <div class="col">
+                <h3>Función append</h3>
+                <p id="p-append">Esto se mantiene</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-html">Click to html</button>
+            </div>
+            <div class="col">
+                <h3>Función html</h3>
+                <p id="p-html">Esto cambiará a html</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <input id="checkbox"  type="checkbox" checked="checked">
+            <label for="checkbox">check box</label>
+            <p id="p-attr"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+        <input class="col-4" type="password" value="escriba un texto aquí">
+        <p id="p-val" class="col-6"></p> 
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary mt-3" id="btn-text">Click to text</button>
+            </div>
+            <div class="col">
+                <h3>Función text</h3>
+                <p id="p-text">Esto cambiará...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        $("#btn-hide").on("click",function(){
+            $("#p-hide").hide();
+        });
+
+        $("#p-show").hide();
+
+        $("#btn-show").on("click",function(){
+            $("#p-show").show();
+        });
+
+        $("#p-toggle2").hide();
+        $( "#btn-toggle" ).on("click",function(){
+            $("#p-toggle").toggle()
+            $("#p-toggle2").show()
+            $("#p-toggle").hide()
+        });
+
+        $("#btn-slicedown").on("click",function(){
+        if ( $( "#p-slicedown").first().is( ":hidden" ) ) {
+            $( "#p-slicedown" ).slideDown( "slow" );
+            } else {
+            $( "#p-slicedown" ).hide();
+            }
+        });
+
+        $("#btn-sliceup").on("click",function(){
+        if ( $( "#p-sliceup").first().is( ":hidden" ) ) {
+            $( "#p-sliceup" ).show( "slow" );
+            } else {
+            $( "#p-sliceup" ).slideUp();
+            }
+        });
+
+        $("#btn-slidetoggle").on("click",function(){
+            $("#p-slidetoggle").slideToggle("slow");
+        });
+
+        $("#btn-fadein").on("click",function(){
+            $("#p-fadein").first().fadeIn( "slow" )
+        });
+
+        $( "#btn-fadeout" ).on("click",function(){
+            $( "#p-fadeout" ).fadeOut( "slow" );
+        });
+
+        $( "#btn-addclass" ).on("click",function(){
+            $("#p-addclass").last().addClass("selected");
+        });
+
+        $("#btn-before").on("click",function(){
+            $("#p-second").before( "<p>Esto irá primero</p>" );
+        });
+
+        $("#btn-after").on("click",function(){
+            $("#p-first").after( "<p>y esto después</p>" );
+        });
+
+        $("#btn-append").on("click",function(){
+            $("#p-append").append(" y esto se agrega");
+        });
+
+        $("#btn-html").on("click",function(){
+            var htmlString = $( this ).html();
+            $( "#p-html" ).text( "<p>text</p>" );
+        });
+
+        $( "input" )
+        .change(function() {
+            var $input = $( this );
+            $( "#p-attr" ).html( ".attr( 'checked' ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+            ".prop( 'checked' ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+            ".is( ':checked' ): <b>" + $input.is( ":checked" ) + "</b>" );
+        })
+        .change();
+
+        $( "input" )
+            .keyup(function() {
+            var value = $( this ).val();
+            $( "#p-val" ).text( value );
+        })
+        .keyup();
+
+        $("#btn-text").on("click",function(){
+            $("#p-text").text("agregando texto");
+        });
+    </script>
+
+</body>
+
+</html>
